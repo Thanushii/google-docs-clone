@@ -1,6 +1,6 @@
 'use server';
 
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid/non-secure'
 import { liveblocks } from '../liveblocks';
 import { revalidatePath } from 'next/cache';
 import { getAccessType, parseStringify } from '../utils';
@@ -30,7 +30,7 @@ export const createDocument = async ({ userId, email }: CreateDocumentParams) =>
 
     return parseStringify(room);
   } catch (error) {
-    console.log(`Error happened while creating a room: ${error}`);
+    console.log(`Error occurred while creating a room: ${error}`);
   }
 }
 
@@ -46,7 +46,7 @@ export const getDocument = async ({ roomId, userId }: { roomId: string; userId: 
     
       return parseStringify(room);
   } catch (error) {
-    console.log(`Error happened while getting a room: ${error}`);
+    console.log(`Error occurred while getting a room: ${error}`);
   }
 }
 
@@ -62,7 +62,7 @@ export const updateDocument = async (roomId: string, title: string) => {
 
     return parseStringify(updatedRoom);
   } catch (error) {
-    console.log(`Error happened while updating a room: ${error}`);
+    console.log(`Error occurred while updating a room: ${error}`);
   }
 }
 
@@ -72,7 +72,7 @@ export const getDocuments = async (email: string ) => {
     
       return parseStringify(rooms);
   } catch (error) {
-    console.log(`Error happened while getting rooms: ${error}`);
+    console.log(`Error occurred while getting rooms: ${error}`);
   }
 }
 
@@ -107,7 +107,7 @@ export const updateDocumentAccess = async ({ roomId, email, userType, updatedBy 
     revalidatePath(`/documents/${roomId}`);
     return parseStringify(room);
   } catch (error) {
-    console.log(`Error happened while updating a room access: ${error}`);
+    console.log(`Error occurred while updating a room access: ${error}`);
   }
 }
 
@@ -128,7 +128,7 @@ export const removeCollaborator = async ({ roomId, email }: {roomId: string, ema
     revalidatePath(`/documents/${roomId}`);
     return parseStringify(updatedRoom);
   } catch (error) {
-    console.log(`Error happened while removing a collaborator: ${error}`);
+    console.log(`Error occurred while removing a collaborator: ${error}`);
   }
 }
 
@@ -138,6 +138,6 @@ export const deleteDocument = async (roomId: string) => {
     revalidatePath('/');
     redirect('/');
   } catch (error) {
-    console.log(`Error happened while deleting a room: ${error}`);
+    console.log(`Error occurred while deleting a room: ${error}`);
   }
 }
