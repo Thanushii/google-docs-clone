@@ -1,39 +1,42 @@
-<div>
-  <h3 align="center">cloudSync - A google docs clone</h3>
-</div>
+# CloudSync - Real-time Document Editor
 
-## <a name="introduction"> Introduction</a>
+A modern, collaborative document editor built with Next.js and Liveblocks, featuring real-time collaboration and rich text editing.
 
-Built with Next.js to handle the user interface, Liveblocks for real-time features and styled with TailwindCSS, cloudSync is a clone of Goole Docs. 
+## Features
 
-## <a name="tech-stack"> Tech Stack</a>
+- Real-time collaborative editing with Liveblocks
+- Rich text formatting using Lexical
+- User authentication with Clerk
+- Document creation and management
+- Responsive design with Tailwind CSS
 
-- Next.js
-- TypeScript
-- Liveblocks
-- Lexical Editor
-- ShadCN
-- Tailwind CSS
 
-## <a name="features"> Features</a>
+## Tech Stack
 
-**Authentication**: User authentication using GitHub through NextAuth, ensuring secure sign-in/out and session management.
+- **Framework**: Next.js 14
+- **Authentication**: Clerk
+- **Real-time Collaboration**: Liveblocks
+- **Rich Text Editor**: Lexical
+- **UI Components**: Radix UI
+- **Styling**: Tailwind CSS
+- **State Management**: React Context
 
-**Collaborative Text Editor**: Multiple users can edit the same document simultaneously with real-time updates.
 
-**Documents Management**
-   - **Create Documents**: Users can create new documents, which are automatically saved and listed.
-   - **Delete Documents**: Users can delete documents they own.
-   - **Share Documents**: Users can share documents via email or link with view/edit permissions.
-   - **List Documents**: Display all documents owned or shared with the user, with search and sorting functionalities.
+## Project Structure
 
-**Comments**: Users can add inline and general comments, with threading for discussions.
+```
+/
+├── app/              # Next.js App Router pages
+├── components/       # Reusable UI components
+├── lib/             # Utility functions and configurations
+├── public/          # Static assets
+├── src/             # Source files
+└── styles/          # Global styles and Tailwind configuration
+```
 
-**Active Collaborators on Text Editor**: Show active collaborators with real-time presence indicators.
+## Key Technologies
 
-**Notifications**: Notify users of document shares, new comments, and collaborator activities.
-
-**Responsive**: The application is responsive across all devices.
-
- 
-
+- **Liveblocks**: Real-time collaboration infrastructure
+- **Lexical**: Rich text editor framework
+- **Clerk**: Authentication and user management
+- **Radix UI**: Accessible UI components

@@ -13,8 +13,9 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'cloudSync',
+  title: ' cloudSync',
   description: 'Your go-to collaborative editor',
+  
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
