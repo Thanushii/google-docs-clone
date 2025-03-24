@@ -22,18 +22,6 @@ A modern, collaborative document editor built with Next.js and Liveblocks, featu
 - **State Management**: React Context
 
 
-## Project Structure
-
-```
-/
-├── app/              # Next.js App Router pages
-├── components/       # Reusable UI components
-├── lib/             # Utility functions and configurations
-├── public/          # Static assets
-├── src/             # Source files
-└── styles/          # Global styles and Tailwind configuration
-```
-
 ## Key Technologies
 
 - **Liveblocks**: Real-time collaboration infrastructure
